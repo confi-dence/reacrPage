@@ -1,0 +1,116 @@
+.imageTop:hover,
+.language:hover,
+.links>a:hover,
+#CloseModal:hover{
+    border-radius: 20px;  
+    box-shadow: 0 0 0 10px #00000067;
+    background-color: #00000067;
+    background-blend-mode: hard-light;
+}
+.v19:hover{
+    text-decoration: underline;
+}
+.result-item {
+    background-color: #f1f1f1;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .result-item:hover {
+    background-color: #ddd;
+  }
+  
+  .text-link {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+  }
+#leftBorder{
+  border: 2px solid #253b79;;
+}
+#CloseModal{
+  display: none;
+}
+@media screen and (max-width:1150px) {
+  #TheFourLinks{
+    display: none;
+  }
+  #InputBarParent{
+    flex: 0.72;
+  }
+
+  #menuReact{
+    flex: 0.14;
+  }
+  #menuReact>div:nth-child(1){
+    display: flex;
+  }
+  #SunGitLan{
+    flex: 0.154;
+  }
+  #firstTopBar{
+    display: none;
+
+  }
+ 
+  #ModalContent{
+    width: 100%;
+  }
+  #CloseModal{
+    display: flex;
+  }
+}
+
+@media screen and (max-width:860px) {
+  #InputBarParent{
+   display: none;
+  }
+  #secondTopBar{
+    justify-content: space-between;
+  }
+  #menuReact{
+    flex: 0.2;
+  }
+  #SunGitLan{
+    flex: 0.27;
+  }
+  #SunGitLan>div:nth-child(1){
+    display: block;
+  }
+  #WebNative{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+}
+@media screen and (max-width:680px) {
+  #TwoBottons{
+    flex-direction: column; 
+  }
+  #LearnBotton{
+    flex: 0.3;
+    justify-content: center;
+  }
+  #LearnBotton>button{
+    width: 90%;
+  }
+  #APLBotton{
+    justify-content: center;
+    flex: 0.7;
+  }
+  #APLBotton>button{
+    width: 90%;
+  }
+
+}
+@media screen and (max-width:550px) {
+  #menuReact{
+    flex: 0.3;
+  }
+  #SunGitLan{
+    flex: 0.45;
+  }
+}
