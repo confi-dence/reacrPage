@@ -5,11 +5,21 @@ closeds = document.getElementById('closes'),
  resultsDiv = document.getElementById("results"),
  CloseModal = document.getElementById("CloseModal"),
  OpenMenu = document.getElementById("OpenMenu"),
- menu = document.getElementById("menu")
+ menu = document.getElementById("menu"),
+ LightOrDark = document.getElementById("LightOrDark")
  
 
  image1  = "url('./images/menuB.png')"
  image2 = "url('./images/cross.png')"
+ image3 = "url('./images/menu.png')"
+ image4 = "url('./images/crossWhite.png')"
+ image5 = "url('./images/reactB.png')"
+ image6 = "url('./images/searchB.png')"
+ image7 = "url('./images/githubw.png')"
+ image8 = "url('./images/moon.png')"
+ image9 = "url('./images/sun.png')"
+//  image4 = "url('./images/crossWhite.png')"
+ 
 
 // openModal.addEventListener('click', function () {
 //         ModalParent.style.display = 'flex'
@@ -28,19 +38,27 @@ CloseModal.addEventListener('click' , function name(params) {
     //   menu.style.display = 'none'
     // })
     function menuCloseOpen() {
-      let ChangeMenuImages = OpenMenu.style.backgroundImage
-      if (ChangeMenuImages.includes('menuB.png')) {
+      let ChangeMenuImages = OpenMenu.style.backgroundImage;
+      const isLight = document.body.classList.contains('LightMode');
+    
+      if (ChangeMenuImages.includes('menuB.png') || ChangeMenuImages.includes('menu.png')) {
+        menu.style.display = 'flex';
+        // OpenMenu.style.backgroundImage = image1;
+      } else {
+        menu.style.display = 'none';
+        OpenMenu.style.backgroundImage = isLight ? image3 : image1;
+      }
+      if (ChangeMenuImages.includes('crossWhite.png') || ChangeMenuImages.includes('cross.png') ) {
+        // OpenMenu.style.backgroundImage = image1;
         menu.style.display = 'flex'
-        OpenMenu.style.backgroundImage = image2
-        // menu.src = image2
       }else{
         menu.style.display = 'none'
-        // menu.src = image1
-        OpenMenu.style.backgroundImage = image1
-
+        OpenMenu.style.backgroundImage = isLight ? image2 : image4;
       }
+     
     }
-OpenMenu.addEventListener('click', menuCloseOpen)
+    
+    OpenMenu.addEventListener('click', menuCloseOpen)
     window.addEventListener('click', function (event) {
         if (event.target === ModalParent) {
             ModalParent.style.display = 'none'
@@ -96,3 +114,19 @@ input.addEventListener("input", () => {
   });
 });
     
+
+// light nd darkMode
+
+
+function LightDark(params) {
+  document.body.classList.toggle('LightMode')
+  OpenMenu.style.backgroundImage = document.body.classList.contains('LightMode')
+  if(document.body.classList.contains('LightMode')){
+    OpenMenu.style.backgroundImage = image3
+    LightOrDark.style.backgroundImage = image8
+
+  }else{
+    LightOrDark.style.backgroundImage = image9
+  }
+}
+LightOrDark.addEventListener('click' , LightDark)

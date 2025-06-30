@@ -33,6 +33,15 @@
 #CloseModal{
   display: none;
 }
+/* light mode */
+body.LightMode{
+  background-color: #F9FAFB;
+  color: rgb(68, 66, 66);
+}
+body.LightMode #ModalParent{
+background-color: #E5E7EB;
+}
+
 @media screen and (max-width:1150px) {
   #TheFourLinks{
     display: none;
