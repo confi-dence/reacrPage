@@ -50,9 +50,9 @@ CloseModal.addEventListener('click' , function name(params) {
       }
       if (ChangeMenuImages.includes('crossWhite.png') || ChangeMenuImages.includes('cross.png') ) {
         // OpenMenu.style.backgroundImage = image1;
-        menu.style.display = 'flex'
-      }else{
         menu.style.display = 'none'
+      }else{
+        menu.style.display = 'flex'
         OpenMenu.style.backgroundImage = isLight ? image2 : image4;
       }
      
@@ -126,7 +126,9 @@ function LightDark(params) {
     LightOrDark.style.backgroundImage = image8
 
   }else{
+    OpenMenu.style.backgroundImage = image1
     LightOrDark.style.backgroundImage = image9
+
   }
 }
 LightOrDark.addEventListener('click' , LightDark)
