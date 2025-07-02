@@ -9,24 +9,28 @@
 </head>
 <body class="box-border bg-gray-900 bg-opacity-90 overflow-hidden text-white flex h-full p-0 m-0 italic font-medium">
     <div class="  flex flex-col h-screen w-full">
-        <div class="flex-[0.07] text-white flex justify-center bg-gray-900 items-center " id="firstTopBar"> 
-            <div class="text-xl">join us for React conf on oct 7-8 <a class="text-blue-900" href="">learn more</a></div>
+        <div class="flex-[0.07] flex justify-center bg-gray-900 items-center " id="firstTopBar"> 
+            <div class="text-xl">join us for React conf on oct 7-8 <a class="text-blue-400" href="">learn more</a></div>
         </div>
         <div class="flex-[0.1] flex flex-row" id="secondTopBar">
             <div class="flex-[0.08] items-center  justify-around flex" id="menuReact">
                
-                <div class="bg-[url('./images/menuB.png')] hidden w-8 bg-blend-multiply cursor-pointer bg-transparent bg-cover bg-center menuimg h-8" id="OpenMenu">
+               
+                <div class="bg-[url('./images/menuB.png')]  hidden w-8 bg-blend-multiply cursor-pointer bg-transparent bg-cover bg-center menuimg h-8" id="OpenMenu">
                 </div>
+              
         
                 <!-- <img src="./images/menuB.png" id="OpenMenu" alt=""> -->
+               <div class="imageTop">
                 <div class="bg-[url('./images/react.png')] w-8 bg-blend-multiply cursor-pointer bg-transparent bg-cover bg-center h-8" >
                 </div>
+               </div>
                  <div class="v19 text-xl">v19</div>
             </div>
             <div class="flex flex-col justify-center items-center flex-[0.5]" id="InputBarParent">
                 <div class="bg-gray-900 bg-opacity-80  cursor-pointer flex  justify-around items-center flex-[0.8] w-full rounded-full searchbar openModal " id="inputTrans">
-                    <div class="flex-[0.11]  flex justify-between items-center flex flex-row" id="inputBar">
-                        <div class="bg-[url('./images/searchB.png')] w-5 bg-blend-multiply bg-transparent bg-cover bg-center h-5" >
+                    <div class="flex-[0.11]  flex justify-between items-center gap-x-4  flex-row" >
+                        <div class="bg-[url('./images/searchB.png')] w-5 bg-blend-multiply  bg-cover bg-center h-5" >
                         </div>
                         <div class="text-lg">search</div>
                     </div>
@@ -55,16 +59,16 @@
             </div>
             <div class=" flex items-center justify-around flex-row flex-[0.12]" id="SunGitLan">
                 <div class=" hidden  imageTop">
-                    <div class="bg-[url('./images/searchB.png')] w-8 openModal cursor-pointer bg-blend-multiply bg-transparent bg-cover bg-center h-8">
+                    <div class="bg-[url('./images/searchB.png')] w-8 openModal cursor-pointer bg-blend-multiply bg-transparent bg-cover bg-center h-8" id="search">
                     </div>
                 </div>
                 <div class=" imageTop">
                     <div class="bg-[url('./images/sun.png')] w-8  bg-blend-multiply cursor-pointer bg-transparent bg-cover bg-center h-8" id="LightOrDark">
                     </div>
                 </div>
-                <a href="" class="text-white language" >好</a>
+                <a href="" class="language" >好</a>
                 <div class=" imageTop">
-                    <div class="bg-[url('./images/github.png')] w-8 bg-blend-multiply cursor-pointer bg-transparent bg-cover bg-center h-8">
+                    <div class="bg-[url('./images/github.png')] w-8 bg-blend-multiply cursor-pointer bg-transparent bg-cover bg-center h-8" id="github">
                     </div>
                 </div>
                 
@@ -76,40 +80,40 @@
                 <div class="flex-[0.2] bg-gray-900">
                 </div>
             </div>
-            <div id="ModalParent" class="absolute bg-gray-900 hidden bg-opacity-50 flex justify-center inset-x-0 top-0  w-full h-full">
-                <div id="ModalContent" class="bg-gray-900 flex-col flex h-full w-3/5 cursor-default">
-                    <div class="flex-[0.25] flex justify-around items-center">
-                        <input placeholder="Quick search" class="w-5/6 h-14 flex-[0.8] rounded-3xl bg-gray-500 text-xl pl-9 outline-none bg-opacity-50 " id="searchInput" type="text">
-                        <div id="CloseModal" class="cursor-pointer flex-[0.05]">Cancel</div>
+        </div>
+        <div id="ModalParent" class="absolute bg-gray-900 hidden bg-opacity-50 flex justify-center inset-x-0 top-0  w-full h-full">
+            <div id="ModalContent" class="bg-gray-900 flex-col flex h-full w-3/5 cursor-default">
+                <div class="flex-[0.25] flex justify-around items-center">
+                    <input placeholder="Quick search" class="w-5/6 h-14 flex-[0.8] rounded-3xl bg-gray-500 text-xl pl-9 outline-none bg-opacity-50 " id="searchInput" type="text">
+                    <div id="CloseModal" class="cursor-pointer flex-[0.05]">Cancel</div>
 
-                    </div>
-                    <div  class="flex-[0.65] flex flex-col items-center mt-2" id="results"></div>
-                    <!-- footer -->
-                    <div  class="flex-[0.1]  flex-col flex justify-center items-center ">
-                        <div class=" flex-[0.03] w-5/6 bg-gray-500 mb-2" id="line"></div>
-                        <div class="flex-[0.97]  w-5/6 flex justify-around">
-                            <div class="flex-[0.31] flex justify-start">press Ctrl + k to open back</div>
-                            <div class="flex-[0.31]  flex justify-center ">press esc on ur laptop to close</div>
-                            <div class="flex-[0.31] flex justify-end items-center h-8">
-                                <div><em class="bg-gray-500">esc</em> close</div>
-                            </div>
-                        </div>
-                     </div>
                 </div>
+                <div  class="flex-[0.65] flex flex-col items-center mt-2" id="results"></div>
+                <!-- footer -->
+                <div  class="flex-[0.1]  flex-col flex justify-center items-center ">
+                    <div class=" flex-[0.03] w-5/6 bg-gray-500 mb-2" id="line"></div>
+                    <div class="flex-[0.97]  w-5/6 flex justify-around">
+                        <div class="flex-[0.31] flex justify-start">press Ctrl + k to open back</div>
+                        <div class="flex-[0.31]  flex justify-center ">press esc on ur laptop to close</div>
+                        <div class="flex-[0.31] flex justify-end items-center h-8">
+                            <div><em class="bg-gray-500">esc</em> close</div>
+                        </div>
+                    </div>
+                 </div>
             </div>
         </div>
-        <div class="flex-[0.83] flex flex-col">
+        <div class="flex-[0.83] flex flex-col" id="ReactLogoand">
        <div class="flex-[0.6]  flex justify-center">
-        <div class=" w-4/5 flex justify-end items-center flex-col">
+        <div class=" w-9/12 text-center flex justify-end items-center IntroText  flex-col">
             <div class="bg-[url('./images/react.png')] h-32  bg-blend-multiply  bg-transparent bg-cover bg-center w-32">
             </div>
             <h1 class="text-6xl" id="React">React</h1>
-            <h3 class="text-3xl" id="WebNative">The library for web and Native <em> user interface</em></h3>
+            <h3 class="text-3xl" id="WebNative">The library for web and Native  user <em>interface</em>  </h3>
         </div>
        </div>
         <div class="flex flex-[0.4] mt-4 text-xl justify-between" id="TwoBottons">
             <div class="flex-[0.495] flex justify-end" id="LearnBotton">
-                <button class="bg-gray-600 h-14 w-40 rounded-full"><a href="">learn React</a></button>
+                <button class="bg-blue-500 text-gray-300  h-14 w-40 rounded-full"><a href="">learn React</a></button>
             </div>
             <div class="flex-[0.495] flex justify-start" id="APLBotton">
                 <button class=" h-14 w-48 bg-transparent rounded-full" id="leftBorder"><a href="">Apl Reference</a></button>

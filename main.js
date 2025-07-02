@@ -6,18 +6,25 @@ closeds = document.getElementById('closes'),
  CloseModal = document.getElementById("CloseModal"),
  OpenMenu = document.getElementById("OpenMenu"),
  menu = document.getElementById("menu"),
- LightOrDark = document.getElementById("LightOrDark")
+ LightOrDark = document.getElementById("LightOrDark"),
+ github = document.getElementById("github"),
+ searchs = document.getElementById("search"),
+ secondTopBar = document.getElementById("secondTopBar"),
+ ReactLogoand = document.getElementById("ReactLogoand")
+ firstTopBar = document.getElementById("firstTopBar")
+
  
 
  image1  = "url('./images/menuB.png')"
  image2 = "url('./images/cross.png')"
  image3 = "url('./images/menu.png')"
  image4 = "url('./images/crossWhite.png')"
- image5 = "url('./images/reactB.png')"
- image6 = "url('./images/searchB.png')"
+ image5 = "url('./images/searchB.png')"
+ image6 = "url('./images/search.png')"
  image7 = "url('./images/githubw.png')"
- image8 = "url('./images/moon.png')"
- image9 = "url('./images/sun.png')"
+ image8 = "url('./images/github.png')"
+ image9 = "url('./images/moon.png')"
+ image10 = "url('./images/sun.png')"
 //  image4 = "url('./images/crossWhite.png')"
  
 
@@ -26,11 +33,15 @@ closeds = document.getElementById('closes'),
 //     })
 CloseModal.addEventListener('click' , function name(params) {
   ModalParent.style.display = 'none'
-  
+  secondTopBar.classList.remove('opactity')
+  firstTopBar.classList.remove('opactity')
 })
     openModal.forEach(search => {
       search.addEventListener('click', function (params) {
         ModalParent.style.display = 'flex'
+        secondTopBar.classList.add('opactity')
+        firstTopBar.classList.add('opactity')
+        // ReactLogoand.classList.add('opactity')
         // menu.style.display = 'none'
       })
     })
@@ -62,13 +73,16 @@ CloseModal.addEventListener('click' , function name(params) {
     window.addEventListener('click', function (event) {
         if (event.target === ModalParent) {
             ModalParent.style.display = 'none'
+            secondTopBar.classList.remove('opactity')
+  firstTopBar.classList.remove('opactity')
         }
     })
 
     document.addEventListener('keydown', function (event) {
         if (event.ctrlKey && event.key.toLowerCase() === 'k') {
           event.preventDefault(); 
-     
+          secondTopBar.classList.add('opactity')
+          firstTopBar.classList.add('opactity')
           ModalParent.style.display = 'flex';
         }
       });
@@ -76,6 +90,8 @@ CloseModal.addEventListener('click' , function name(params) {
         if (event.key === 'Escape') {
           event.preventDefault(); // Prevent browser default (like search)
           ModalParent.style.display = 'none';
+          secondTopBar.classList.remove('opactity')
+  firstTopBar.classList.remove('opactity')
         }
       });
 
@@ -122,13 +138,38 @@ function LightDark(params) {
   document.body.classList.toggle('LightMode')
   OpenMenu.style.backgroundImage = document.body.classList.contains('LightMode')
   if(document.body.classList.contains('LightMode')){
+    localStorage.setItem('mode', 'light')
     OpenMenu.style.backgroundImage = image3
-    LightOrDark.style.backgroundImage = image8
-
-  }else{
-    OpenMenu.style.backgroundImage = image1
     LightOrDark.style.backgroundImage = image9
-
+    github.style.backgroundImage = image7
+    searchs.style.backgroundImage = image6
+  }else{
+    localStorage.setItem('mode', 'dark')
+    github.style.backgroundImage = image8
+    OpenMenu.style.backgroundImage = image1
+    LightOrDark.style.backgroundImage = image10
+    searchs.style.backgroundImage = image5
   }
 }
+// openModal.forEach(search => search.style.backgroundImage = image3)
 LightOrDark.addEventListener('click' , LightDark)
+
+const savemode = localStorage.getItem('mode')
+
+if (savemode === 'light') {
+    document.body.classList.add('LightMode')
+OpenMenu.style.backgroundImage = image3
+    LightOrDark.style.backgroundImage = image9
+    github.style.backgroundImage = image7
+    searchs.style.backgroundImage = image6
+    
+    // closedropDownBar.style.display = 'none'
+  } else {
+    document.body.classList.remove('LightMode')
+    LightOrDark.style.backgroundImage = image10
+    
+    github.style.backgroundImage = image8
+    OpenMenu.style.backgroundImage = image1
+    closedropDownBar.style.display = 'none'
+searchs.style.backgroundImage = image5
+  }
