@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="main.css">
     <title>reactPage</title>
 </head>
-<body class="box-border bg-gray-900 bg-opacity-90 overflow-hidden text-white flex h-full p-0 m-0 italic font-medium">
+<body class="box-border bg-gray-900 font-bold bg-opacity-90 overflow-hidden text-white flex h-full p-0 m-0 italic">
     <div class="  flex flex-col h-screen w-full">
         <div class="flex-[0.07] flex justify-center bg-gray-900 items-center " id="firstTopBar"> 
             <div class="text-xl">join us for React conf on oct 7-8 <a class="text-blue-400" href="">learn more</a></div>
@@ -73,13 +73,47 @@
                 </div>
                 
             </div>
-            <div class=" absolute bg-gray-800 mt-16 hidden verflow-y-auto flex-col flex w-full h-full" id="menu">
-                <div class="bg-gray-600 flex-[0.2]"></div>
-                <div class="flex-[0.3]"></div>
-                <div class="bg-gray-600 flex-[0.3]"></div>
-                <div class="flex-[0.2] bg-gray-900">
+           <div class="absolute hidden mt-16 text-lg font-bold overflow-y-auto flex-col flex w-full h-screen"  id="menu">
+            <div class=" flex-col flex w-full h-screen">
+                <div class=" flex-[0.001]  bg-gray-300 mb-2" id="lines"></div>
+                <div class=" flex-[0.12] flex-col">
+                    <ul class="flex-[1] text-xl w-full h-full flex flex-row justify-center " id="hoverLink">
+                        <li class="flex-[0.2] flex justify-center cursor-pointer items-center "><a href="">Learn</a></li>
+                        <li class="flex-[0.2] flex justify-center cursor-pointer items-center"><a href="">Refernce</a></li>
+                        <li class="flex-[0.2] flex justify-center cursor-pointer items-center"><a href=""> community</a></li>
+                        <li class="flex-[0.2] flex justify-center cursor-pointer items-center"><a href="">Blog</a></li> 
+                    </ul>
+                </div>
+                <div class=" flex-[0.001] w-11/12 flex self-center bg-gray-300 mb-2" id="line"></div>
+                <div class="flex-[0.23]  flex flex-col items-center justify-center">
+                    <div class="flex flex-col w-11/12 justify-between flex-[0.75]" id="menu-list">
+                        <h2 class="text-gray-400 text-xl">Get Started</h2>
+                    <p class="cursor-pointer">Quick Start</p>
+                    <p class="cursor-pointer">Installation</p>
+                    </div>
+                </div>
+                <div class=" flex-[0.001] w-11/12 flex self-center bg-gray-300 mb-2" id="line"></div>
+                <div class=" flex flex-col items-center justify-center flex-[0.3]">
+                    <div class="flex flex-col w-11/12 justify-between flex-[0.95]" id="menu-list">
+                        <h2 class="text-gray-400 text-xl">Learn React</h2>
+                    <p class="cursor-pointer">Describing the Ul</p>
+                    <p class="cursor-pointer">Adding Interactivity</p>
+                    <p class="cursor-pointer">Managing State</p>
+                    <p class="cursor-pointer">Escape Hatches</p>
+                    </div>
+                </div>
+                <div class=" flex-[0.001] w-11/12 flex self-center bg-gray-300 mb-2" id="line"></div>
+                <div class=" flex flex-col items-center justify-center flex-[0.3]">
+                    <div class="flex flex-col  w-11/12 justify-between flex-[0.95]" id="menu-list">
+                        <h2 class="text-gray-400 text-xl">React APl</h2>
+                    <p class="cursor-pointer">Hooks</p>
+                    <p class="cursor-pointer">Component</p>
+                    <p class="cursor-pointer">Apls</p>
+                    <p class="cursor-pointer">Legacy Apls</p>
+                    </div>
                 </div>
             </div>
+           </div>
         </div>
         <div id="ModalParent" class="absolute bg-gray-900 hidden bg-opacity-50 flex justify-center inset-x-0 top-0  w-full h-full">
             <div id="ModalContent" class="bg-gray-900 flex-col flex h-full w-3/5 cursor-default">
@@ -93,9 +127,9 @@
                 <div  class="flex-[0.1]  flex-col flex justify-center items-center ">
                     <div class=" flex-[0.03] w-5/6 bg-gray-500 mb-2" id="line"></div>
                     <div class="flex-[0.97]  w-5/6 flex justify-around">
-                        <div class="flex-[0.31] flex justify-start">press Ctrl + k to open back</div>
-                        <div class="flex-[0.31]  flex justify-center ">press esc on ur laptop to close</div>
-                        <div class="flex-[0.31] flex justify-end items-center h-8">
+                        <div class="flex-[0.3] flex justify-start">press Ctrl + k to open back</div>
+                        <div class="flex-[0.3]  flex justify-center ">press esc on ur laptop to close</div>
+                        <div class="flex-[0.3] flex justify-end items-center h-8">
                             <div><em class="bg-gray-500">esc</em> close</div>
                         </div>
                     </div>

@@ -55,7 +55,9 @@ CloseModal.addEventListener('click' , function name(params) {
       if (ChangeMenuImages.includes('menuB.png') || ChangeMenuImages.includes('menu.png')) {
         menu.style.display = 'flex';
         // OpenMenu.style.backgroundImage = image1;
+        ReactLogoand.style.display = 'none'
       } else {
+        ReactLogoand.style.display = 'flex'
         menu.style.display = 'none';
         OpenMenu.style.backgroundImage = isLight ? image3 : image1;
       }
@@ -102,6 +104,18 @@ const links = [
   { word: "Reference", url: "" },
   { word: "Community", url: "" },
   { word: "Blog", url: "" },
+  { word: "Quick Start", url: "" },
+  { word: "Installation", url: "" },
+  { word: "Describing the Ul", url: "" },
+  { word: "Adding Interactivity", url: "" },
+  { word: "Managing State", url: "" },
+  { word: "Escape Hatches", url: "" },
+  { word: "Hooks", url: "" },
+  { word: "Component", url: "" },
+  { word: "Apls", url: "" },
+  { word: "Legacy Apls", url: "" },
+  { word: "learn React", url: "" },
+  { word: "Apl Reference", url: "" },
 
 ];
 
@@ -116,14 +130,14 @@ input.addEventListener("input", () => {
 
   matches.forEach(match => {
     const container = document.createElement("div");
-    container.className = " flex w-5/6 justify-center items-center hover:bg-gray-800 bg-opacity-10 p-3  rounded-xl mb-2";
+    container.className = " flex w-5/6 justify-center items-center hover:bg-gray-600 bg-opacity-10 p-3  rounded-xl mb-2";
 
     const a = document.createElement("a");
     
     a.href = match.url;
     a.target = "_blank";
     a.textContent = match.word;
-    a.className = "text-white font-semibold hover:underline";
+    a.className = " text-black font-semibold hover:underline";
 
     container.appendChild(a);
     resultsDiv.appendChild(container);
