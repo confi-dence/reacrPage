@@ -21,6 +21,7 @@
 .v19:hover{
     text-decoration: underline;
 }
+
 .result-item {
     background-color: #f1f1f1;
     padding: 10px;
@@ -29,18 +30,34 @@
     transition: background-color 0.3s;
   }
   #lines{
-    box-shadow: 0 0 5px black;
+    box-shadow: 0 0 10px white;
   }
   
   .result-item:hover {
     background-color: #ddd;
   }
-  
-  .text-link {
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-  }
+  /* Add to your CSS file or inside a <style> tag */
+
+.custom-scroll::-webkit-scrollbar-track {
+  background: #111827; /* light gray track */
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+  background-color: #374151; /* Tailwind's indigo-600 */
+  border-radius: 6px;
+  border: 3px solid #9CA3AF;
+}
+
+/* Optional: for Firefox */
+.custom-scroll {
+  scrollbar-color:  #374151 #111827;
+}
+
+.text-link {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
 #leftBorder{
   border: 2px solid #253b79;;
 }
@@ -51,6 +68,23 @@
 body.LightMode{
   background-color: #F9FAFB;
   color: #1F2937;
+}
+body.LightMode .custom-scroll::-webkit-scrollbar-track {
+  background: #D1D5DB; /* light gray track */
+}
+
+body.LightMode .custom-scroll::-webkit-scrollbar-thumb {
+  background-color: #F3F4F6; /* Tailwind's indigo-600 */
+  border-radius: 6px;
+  border: 3px solid #9CA3AF;
+}
+
+/* Optional: for Firefox */
+body.LightMode .custom-scroll {
+  scrollbar-color:  #F3F4F6 #D1D5DB;
+}
+body.LightMode #lines{
+  box-shadow: 0 0 10px black;
 }
 body.LightMode #ModalParent{
 background-color: #E5E7EB;
@@ -158,6 +192,13 @@ body.LightMode #results>a:hover{
   #SunGitLan{
     flex: 0.45;
   }
+  #menu{
+    font-size: 16px;
+  }
+  #hoverLink,
+  #menu-list>h2{
+    font-size: 18px;
+  }
 }
 @media screen and (max-width: 425px) {
   #React{
@@ -179,5 +220,11 @@ body.LightMode #results>a:hover{
     font-size: 28px;
 
     /* background: #000; */
+  }
+  #menu{
+    font-size: 16px;
+  }
+  h2{
+    font-size: 18px;
   }
 }
