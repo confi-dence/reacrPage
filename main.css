@@ -30,7 +30,7 @@
     transition: background-color 0.3s;
   }
   #lines{
-    box-shadow: 0 0 10px white;
+    box-shadow: 0 2px 5px white;
   }
   
   .result-item:hover {
@@ -74,17 +74,17 @@ body.LightMode .custom-scroll::-webkit-scrollbar-track {
 }
 
 body.LightMode .custom-scroll::-webkit-scrollbar-thumb {
-  background-color: #F3F4F6; /* Tailwind's indigo-600 */
+  background-color:  #9CA3AF; /* Tailwind's indigo-600 */
   border-radius: 6px;
   border: 3px solid #9CA3AF;
 }
 
 /* Optional: for Firefox */
 body.LightMode .custom-scroll {
-  scrollbar-color:  #F3F4F6 #D1D5DB;
+  scrollbar-color:   #9CA3AF #D1D5DB;
 }
 body.LightMode #lines{
-  box-shadow: 0 0 10px black;
+  box-shadow: 0 2px 5px black;
 }
 body.LightMode #ModalParent{
 background-color: #E5E7EB;
@@ -192,13 +192,7 @@ body.LightMode #results>a:hover{
   #SunGitLan{
     flex: 0.45;
   }
-  #menu{
-    font-size: 16px;
-  }
-  #hoverLink,
-  #menu-list>h2{
-    font-size: 18px;
-  }
+
 }
 @media screen and (max-width: 425px) {
   #React{
@@ -224,7 +218,8 @@ body.LightMode #results>a:hover{
   #menu{
     font-size: 16px;
   }
-  h2{
+  #hoverLink,
+  #menu-list>h2{
     font-size: 18px;
   }
 }
