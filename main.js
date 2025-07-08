@@ -10,8 +10,9 @@ closeds = document.getElementById('closes'),
  github = document.getElementById("github"),
  searchs = document.getElementById("search"),
  secondTopBar = document.getElementById("secondTopBar"),
- ReactLogoand = document.getElementById("ReactLogoand")
- firstTopBar = document.getElementById("firstTopBar")
+ ReactLogoand = document.getElementById("ReactLogoand"),
+ firstTopBar = document.getElementById("firstTopBar"),
+ lines = document.getElementById("lines"),
 
  
 
@@ -35,12 +36,15 @@ CloseModal.addEventListener('click' , function name(params) {
   ModalParent.style.display = 'none'
   secondTopBar.classList.remove('opactity')
   firstTopBar.classList.remove('opactity')
+        lines.style.display = 'block'
+
 })
     openModal.forEach(search => {
       search.addEventListener('click', function (params) {
         ModalParent.style.display = 'flex'
         secondTopBar.classList.add('opactity')
         firstTopBar.classList.add('opactity')
+        lines.style.display = 'none'
         // ReactLogoand.classList.add('opactity')
         // menu.style.display = 'none'
       })
@@ -86,6 +90,8 @@ CloseModal.addEventListener('click' , function name(params) {
           secondTopBar.classList.add('opactity')
           firstTopBar.classList.add('opactity')
           ModalParent.style.display = 'flex';
+        lines.style.display = 'none'
+
         }
       });
     document.addEventListener('keydown', function (event) {
@@ -94,6 +100,8 @@ CloseModal.addEventListener('click' , function name(params) {
           ModalParent.style.display = 'none';
           secondTopBar.classList.remove('opactity')
   firstTopBar.classList.remove('opactity')
+  lines.style.display = 'block'
+
         }
       });
 

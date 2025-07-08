@@ -64,6 +64,7 @@
 #CloseModal{
   display: none;
 }
+
 /* light mode */
 body.LightMode{
   background-color: #F9FAFB;
@@ -83,6 +84,7 @@ body.LightMode .custom-scroll::-webkit-scrollbar-thumb {
 body.LightMode .custom-scroll {
   scrollbar-color:   #9CA3AF #D1D5DB;
 }
+
 body.LightMode #lines{
   box-shadow: 0 2px 5px black;
 }
@@ -192,7 +194,9 @@ body.LightMode #results>a:hover{
   #SunGitLan{
     flex: 0.45;
   }
-
+  #LinksSmallS{
+    flex:0.45;
+  }
 }
 @media screen and (max-width: 425px) {
   #React{
